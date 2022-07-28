@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  date: 2022-07-28 13:31:04
+  presenter: MyString
+  degree: MyString
+  is_english: false
+  is_domestic: false
+  is_common: false
+
+two:
+  name: MyString
+  description: MyString
+  date: 2022-07-28 13:31:04
+  presenter: MyString
+  degree: MyString
+  is_english: false
+  is_domestic: false
+  is_common: false
