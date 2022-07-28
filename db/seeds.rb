@@ -7,4 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Event.create(
-    [{ name: 'First Event',  description: 'Event description', date: '2016-06-06 01:00:00', presenter: 'Geoff Reid', degree: '', is_english: '', is_domestic: '', is_common: ''}])
+    [{ name: 'First Event',  description: 'Event description', date: '2016-06-06 01:00:00', presenter: 'Geoff Reid', degree: '', is_english: false, is_domestic: false, is_common: false}])
