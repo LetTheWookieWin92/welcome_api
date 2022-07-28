@@ -29,3 +29,20 @@ Content-Type: application/json
     "is_domestic": false,
     "is_common": false
 }
+
+### Show event id: 8 (should succeed)
+GET http://localhost:3000/api/events/8
+
+### Show event id: 8 (should fail - no event at id 1)
+GET http://localhost:3000/api/events/1
+
+### Update event id:8 name (should succeed)
+PUT http://localhost:3000/api/events/8
+Content-Type: application/json
+
+{
+    "name": "Event update",
+}
+
+### Delete event id:4
+DELETE http://localhost:3000/api/events/4
