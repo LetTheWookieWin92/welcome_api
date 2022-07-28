@@ -1,3 +1,31 @@
 ### Get all events
 
 GET http://localhost:3000/api/events
+
+
+### Create a new event (should succeed)
+POST http://localhost:3000/api/events
+Content-Type: application/json
+
+{
+    "name": "Event",
+    "description": "Some description",
+    "date": "2022-06-06T01:00:00.000Z",
+    "presenter": "Geoff Reid",
+    "is_english": false,
+    "is_domestic": false,
+    "is_common": false
+}
+
+### Create a new event (should fail - no name)
+POST http://localhost:3000/api/events
+Content-Type: application/json
+
+{
+    "description": "Some description",
+    "date": "2022-06-06T01:00:00.000Z",
+    "presenter": "Geoff Reid",
+    "is_english": false,
+    "is_domestic": false,
+    "is_common": false
+}

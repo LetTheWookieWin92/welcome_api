@@ -8,17 +8,19 @@ class EventsController < ApplicationController
 
     # Create an event
     def create
-        @event = Event.create(event_params)
 
-        # If there are any errors in creating the event e.g. validation failure, return the errors
-        if @event.errors.any? 
-            render json: @event.error, status: :unprocessable_entity
+        # If there are any errors in creating the event e.g. missing params, return error, else return created event with success status
+        begin
+            @event = Event.create(event_params)
+        rescue
+            render status: :unprocessable_entity
         else
             render json: @event, status: 201 # Pass back successful event creation status
-        end
+        end      
+
     end
 
-    # Defines the parameters that are required to be sent when creating an event
+    # Defines the parameters that are permitted to be sent when creating an event
     private
     def event_params
         params.require(:event).permit(
