@@ -1,10 +1,10 @@
 ### Get all events
 
-GET http://localhost:3000/api/events
+GET http://localhost:3000/events
 
 
 ### Create a new event (should succeed)
-POST http://localhost:3000/api/events
+POST http://localhost:3000/events
 Content-Type: application/json
 
 {
@@ -18,7 +18,7 @@ Content-Type: application/json
 }
 
 ### Create a new event (should fail - no name)
-POST http://localhost:3000/api/events
+POST http://localhost:3000/events
 Content-Type: application/json
 
 {
@@ -31,13 +31,13 @@ Content-Type: application/json
 }
 
 ### Show event id: 8 (should succeed)
-GET http://localhost:3000/api/events/8
+GET http://localhost:3000/events/8
 
 ### Show event id: 8 (should fail - no event at id 1)
-GET http://localhost:3000/api/events/1
+GET http://localhost:3000/events/1
 
 ### Update event id:8 name (should succeed)
-PUT http://localhost:3000/api/events/8
+PUT http://localhost:3000/events/8
 Content-Type: application/json
 
 {
@@ -45,4 +45,4 @@ Content-Type: application/json
 }
 
 ### Delete event id:4
-DELETE http://localhost:3000/api/events/4
+DELETE http://localhost:3000/events/4
