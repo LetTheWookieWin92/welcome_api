@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2022_07_28_033104) do
     t.string "name", limit: 75, null: false
     t.string "description", limit: 750, null: false
     t.datetime "date", null: false
+    t.integer "duration", null: false
     t.string "presenter", limit: 75, null: false
     t.string "degree", limit: 100
     t.boolean "is_english", null: false

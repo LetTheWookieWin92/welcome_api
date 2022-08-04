@@ -65,10 +65,12 @@ class EventsController < ApplicationController
     # Defines the parameters that are permitted to be sent when creating an event
     private
     def event_params
-        params.require(:event).permit(
+        params.permit(
             :name,
             :description,
             :date, 
+            :duration,
+            :degree,
             :presenter,
             :is_english,
             :is_domestic,

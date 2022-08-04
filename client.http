@@ -8,11 +8,45 @@ POST http://localhost:3000/events
 Content-Type: application/json
 
 {
-    "name": "Event",
+    "name": "Optional event for all",
     "description": "Some description",
-    "date": "2022-06-06T01:00:00.000Z",
+    "date": "2022-06-14T03:00:00.000Z",
+    "duration": 60,
     "presenter": "Geoff Reid",
+    //"degree": "Master of Criminology",
     "is_english": false,
+    "is_domestic": false,
+    "is_common": false
+}
+
+### Create a new degree-specific event (should succeed)
+POST http://localhost:3000/events
+Content-Type: application/json
+
+{
+    "name": "Welcome to Criminology",
+    "description": "Some description",
+    "date": "2022-06-16T01:00:00.000Z",
+    "duration": 90,
+    "presenter": "Geoff Reid",
+    "degree": "Master of Criminology",
+    "is_english": false,
+    "is_domestic": false,
+    "is_common": false
+}
+
+### Create a new non-English native event (should succeed)
+POST http://localhost:3000/events
+Content-Type: application/json
+
+{
+    "name": "SCANA English Language Assessment",
+    "description": "Some description",
+    "date": "2022-06-15T05:00:00.000Z",
+    "duration": 30,
+    "presenter": "Geoff Reid",
+    //"degree": "Master of Criminology",
+    "is_english": true,
     "is_domestic": false,
     "is_common": false
 }
@@ -24,6 +58,7 @@ Content-Type: application/json
 {
     "description": "Some description",
     "date": "2022-06-06T01:00:00.000Z",
+    "duration": 1,
     "presenter": "Geoff Reid",
     "is_english": false,
     "is_domestic": false,
