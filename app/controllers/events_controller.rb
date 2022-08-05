@@ -68,6 +68,7 @@ class EventsController < ApplicationController
         params.permit(
             :name,
             :description,
+            :location,
             :date, 
             :duration,
             :degree,

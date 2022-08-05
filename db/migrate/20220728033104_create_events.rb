@@ -2,6 +2,7 @@ class CreateEvents < ActiveRecord::Migration[6.0]
   def change
     create_table :events do |t|
       t.string :name, limit: 75, null: false 
+      t.string :location, limit: 30, null: false 
       t.string :description, limit: 750, null: false
       t.datetime :date, null: false
       t.integer :duration, null: false

@@ -8,10 +8,11 @@ POST http://localhost:3000/events
 Content-Type: application/json
 
 {
-    "name": "Optional event for all",
+    "name": "Welcome Lunch for Law Students",
+    "location": "Law Foyer",
     "description": "Some description",
-    "date": "2022-06-14T03:00:00.000Z",
-    "duration": 60,
+    "date": "2022-06-14T01:00:00.000Z",
+    "duration": 120,
     "presenter": "Geoff Reid",
     //"degree": "Master of Criminology",
     "is_english": false,
@@ -25,10 +26,11 @@ Content-Type: application/json
 
 {
     "name": "Welcome to Criminology",
+    "location": "NLS 240",
     "description": "Some description",
     "date": "2022-06-16T01:00:00.000Z",
     "duration": 90,
-    "presenter": "Geoff Reid",
+    "presenter": "Prof John Smith",
     "degree": "Master of Criminology",
     "is_english": false,
     "is_domestic": false,
@@ -41,10 +43,11 @@ Content-Type: application/json
 
 {
     "name": "SCANA English Language Assessment",
+    "location": "SR 104",
     "description": "Some description",
     "date": "2022-06-15T05:00:00.000Z",
     "duration": 30,
-    "presenter": "Geoff Reid",
+    "presenter": "ESL Team",
     //"degree": "Master of Criminology",
     "is_english": true,
     "is_domestic": false,
